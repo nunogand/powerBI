@@ -1,0 +1,34 @@
+Jekyll em Ubuntu 17.10
+
+***Instalar RUBY (com RVM):***
+
+sudo apt-get install software-properties-common
+
+sudo apt-add-repository -y ppa:rael-gc/rvm
+sudo apt-get update
+sudo apt-get install rvm
+
+Seguir as instruções em: https://github.com/rvm/ubuntu_rvm
+
+rvm install ruby-2.3.5
+
+ruby -v /para verificar a instalação
+
+
+
+***RubyGems***
+gem update --system  # may need to be administrator or root
+
+(se surgir a mensagem "Nothing to update")
+
+gem install rubygems-update  # again, might need to be admin/root
+update_rubygems              # ... here too
+
+Ou então ir a https://rubygems.org/pages/download
+
+
+***Install Jekyll with RubyGems***
+
+gem install jekyll
+
+jekyll --version
