@@ -1,0 +1,17 @@
+Doentes com todos os diagnosticos =
+COUNTROWS (
+    EXCEPT (
+        VALUES ( DIAGNOSTICOS[Utente] ),
+        SUMMARIZE (
+            GENERATE (
+                VALUES ( DIAGNOSTICOS[Utente] ),
+                EXCEPT (
+                    VALUES ( DIAGNOSTICOS[ICPC] ),
+                    CALCULATETABLE ( VALUES ( DIAGNOSTICOS[ICPC] ) )
+                )
+            ),
+            DIAGNOSTICOS[Utente]
+        )
+    )
+)
+    + 0
