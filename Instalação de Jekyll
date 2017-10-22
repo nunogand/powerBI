@@ -6,10 +6,10 @@ sudo apt-get install software-properties-common
 
 sudo apt-add-repository -y ppa:rael-gc/rvm
 sudo apt-get update
-sudo apt-get install rvm
+sudo apt-get install rvm (se estiverem em ubuntu 17.10 pode ser necessário mudar o repositório para Zesty)
 
 Seguir as instruções em: https://github.com/rvm/ubuntu_rvm
-
+source /etc/profile.d/rvm.sh
 rvm install ruby-2.3.5
 
 ruby -v /para verificar a instalação
